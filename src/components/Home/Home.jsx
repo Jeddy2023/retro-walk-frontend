@@ -1,55 +1,81 @@
 import React from 'react';
 import  './home.css';
-import slider1 from '../images/slider1.webp';
-import slider2 from '../images/slider2.webp';
-import slider3 from '../images/slider3.webp';
-
+import './trend.css'
+import cate1_1 from '../images/cate1_btm1.webp';
+import cate1_2 from '../images/cate1_btm2.webp';
+import cate1_top from '../images/cate1_top.webp';
+import cate2 from '../images/cate2.webp';
+import { Link } from 'react-router-dom';
+import { EmblaCarousel } from './EmblaCarousel';
+import { useEffect } from 'react';
+import { useState } from 'react';
+import Aos from 'aos';
+import Trend from './Trend';
+import 'aos/dist/aos.css';
 function Home() {
+     useEffect(() => {
+        Aos.init();
+      }, [])
+   
+          
+    
+      
   return (  
     <>
         <div id="hero_sec">
-            <div id="hero_con">
-                <div id="hero_1">
-                    <img src={slider1} alt="" />
-                    <div className="hero_txt">
-                        <h1>Essentials 
-                            <span>
-                            Starting at $9.99
-                            </span>
-                            
-                        </h1>
-                        <p>Oufie Boutique is Located at Port-Harcourt</p>
-                        <button>SHOP NOW</button>
-                    </div>
+            <EmblaCarousel/>
+        </div>
+        <div id="category">
+            <div className="cate_1">
+                <div className="top">
+                    <img src={cate1_top} alt="" />
+                    <button className="txt ">Dress</button>
                 </div>
-                <div id="hero_1">
-                    <img src={slider2} alt="" />
-                    <div className="hero_txt">
-                        <h1>Today Only 
-                            <span>
-                            20% Off + Free Shipping
-                            </span>
-                            
-                        </h1>
-                        <p>Oufie Boutique is Located at Port-Harcourt</p>
-                        <button>SHOP NOW</button>
+                <div className="btm">
+                    <div className="rgt">
+                    <button className="txt ">Accessories</button>
+                        <img src={cate1_1} alt="" />
                     </div>
-                </div>
-                <div id="hero_1">
-                    <img src={slider3} alt="" />
-                    <div className="hero_txt">
-                        <h1>Packs 
-                            <span>
-                            From $12.99
-                            </span>
-                            
-                        </h1>
-                        <p>Oufie Boutique is Located at Port-Harcourt</p>
-                        <button>SHOP NOW</button>
+                    <div className="left">
+                    <button className="txt ">Shoes</button>
+                        <img src={cate1_2} alt="" />
                     </div>
                 </div>
             </div>
+            <div className="cate_2">
+                <div className="txt ">
+                    <p>NEW ARRIVALS</p>
+                    <h1>
+                        Blondes <br />
+                        with minimalist
+                    </h1>
+                    <Link className='link'>Shop Collection</Link>
+                </div>
+                <img src={cate2} alt="" />
+            </div>
         </div>
+        <section id="trend">
+            <div className="content">
+                <div className="top">
+                    <div className="left">
+                        <h1>You are in 
+                            <span className='htyz'> trending
+                                <span class="material-symbols-outlined">
+                                    south
+                                </span>
+                            </span>
+                        </h1>
+                    </div>
+                    <div className="rgt">
+                        <Link className='rgt_link'>Shop all product</Link>
+                    </div>
+                </div>
+                <ul className="btm">
+                    <Trend/>       
+                </ul>
+            </div>
+        </section>
+        <section id="collection"></section>
     </>
   ) 
 }
