@@ -12,6 +12,7 @@ import { useState } from 'react';
 import Aos from 'aos';
 import Trend from './Trend';
 import 'aos/dist/aos.css';
+import Collection from '../Collection';
 function Home() {
      useEffect(() => {
         Aos.init();
@@ -75,7 +76,8 @@ function Home() {
                 </ul>
             </div>
         </section>
-        <section id="collection"></section>
+        
+            <Collection/>
     </>
   ) 
 }
