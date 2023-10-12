@@ -1,0 +1,127 @@
+.collection_con{
+    width: 100%;
+    display: flex;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.collection_con .img_con{
+    flex: 1;
+    overflow: hidden;
+    border-right: 1px solid white;
+    position: relative;
+    transition: 1s;
+}
+
+
+.collection_con .img_con img{
+    width: 100%;   
+    object-position: center;
+    height: calc(100vh - 10vh);
+    object-fit: cover;
+    transition: 2.5s;
+}
+/* .collection_con .img_con:nth-child(3){
+    flex: 1 1 45%;   
+} */
+.collection_con .img_con:hover{
+    flex: 45%;
+}
+.collection_con .img_con:hover .col_img{
+    width: 100%;
+}
+.collection_con .img_con span{
+    transform: rotate(90deg);
+    color: white;
+    position: absolute;
+    bottom: 20%;
+    left: -5%;
+}
+.collection_con .img_con button{
+    /* padding: 10px; */
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: none;
+    /* display: none; */
+    font-size: 25px;
+    color: black;
+    top: 0;
+    position: absolute;
+    transition: 0.6s;
+    cursor: pointer;
+}
+.collection_con .img_con button:hover{
+    background-color:  #41cde2;
+    color: white;
+}
+
+
+.collection_con .img_con img:hover .collection_con .img_con button{
+    display: flex;
+    background-color: green;
+}
+
+.collection_con .img_con .btn1{
+    top: 33%;
+    left: 65%;
+}
+.collection_con .img_con .btn2{
+    top: 57%;
+    left: 60%;
+}
+.collection_con .img_con .btn3{
+    top: 48%;
+    left: 47%;
+}
+.collection_con .img_con .btn4{
+    top: 72%;
+    left: 50%;
+}
+.collection_con .img_con button::before,
+.collection_con .img_con button::after{
+        pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -0.2px;
+    top: -1px;
+    cursor: pointer;
+    content: "";
+    border: 1px solid white;
+    -webkit-animation-name: scale-lookbook;
+    animation-name: scale-lookbook;
+    -webkit-animation-duration: 3s;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+  @keyframes scale-lookbook {
+         0% {
+            transform: scale(1); /* Rotating the element 360 degrees */
+            border: 2px solid #41cde2;
+         }
+         50%{
+            transform: scale(1.2);
+            border-width: 1px;
+            /* display: none; */
+         }
+         100%{
+            border: none;
+         }
+      }
+.img_con button:hover .img_con button::before,
+.img_con button:hover .img_con button::after{
+    border-color: #41cde2;
+}
+.img_con button::before:hover{
+        border-color: #41cde2;
+}
+.img_con button::after:hover{
+        border-color: #41cde2;
+}
