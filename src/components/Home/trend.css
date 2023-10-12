@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* TREND SECTION */
+#trend{
+    width: 100%;
+    padding: 120px 0 150px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid gray;
+}
+#trend .content{
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    align-items: center;
+}
+#trend .content .top{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+}
+#trend .content .top .left h1{
+    font-size: 40px;
+    line-height: 0;
+    font-weight: 350;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: #868686;
+}
+#trend .content .top .left h1 .htyz{
+    color: black;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+}
+#trend .content .top .left h1 span .material-symbols-outlined{
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: -27px;
+    line-height: 0;
+    height: fit-content;
+    width: fit-content;
+}
+
+#trend .content .top .left{
+    display: flex;
+    flex-direction: column;
+
+}
+#trend .content .top .rgt .rgt_link{
+    color: black;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 0.402);
+    font-weight: 400;
+    line-height: 0;
+    transition: ease-in-out 1s;
+    padding-bottom: 3px;
+    border-bottom: 1px solid black;
+    position: relative;
+}
+
+
+#trend .content .top .rgt .rgt_link:after{
+    transform: scaleX(1);
+    transform-origin:100% 0%;
+    transition: 1s;
+}
+#trend .content .top .rgt .rgt_link:hover:before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 0;
+	border-bottom: solid 1px #000;
+	animation: border_anim 0.5s linear forwards;
+}
+
+@keyframes border_anim {
+	0%{
+		width: 100%;
+	}
+	100%{
+		width: 0%;
+	}
+}
+@keyframes border_anim2 {
+	0%{
+		width: 0%;
+	}
+	100%{
+		width: 100%;
+	}
+}
+
+#trend .content .top .rgt .rgt_link:hover{
+    color: #41cde2;
+    border: none;
+}
+#trend .content .btm{
+    display: grid;
+    gap: 20px;
+    width: 1500px;
+    align-items: center;
+    row-gap: 200px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 350px));
+    grid-auto-rows: 400px;
+}
+#trend .content .btm li{
+    display: flex;
+    padding-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+#trend .price .red{
+    color: red;
+}
+#trend .btm li .img_con{
+    width: 100%;
+}
+#trend .btm li .img_con img{
+    width: 100%;
+    /* height: 100%; */
+}
+#trend .btm li .txt{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    width: 100%;
+}
+#trend .btm li .txt .name{
+    font-family: 'Kanit', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+#trend .btm li .txt .black{
+    background-color: black;
+}
+
+#trend li .circles{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+#trend li .circles span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+#trend li .circles span div{
+    padding: 3.3px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+#trend li .circles span div .black{
+    background-color: black;
+}
+#trend li .circles span div .red{
+    background-color: red;
+}
+#trend li .circles span div .brown{
+    background-color: brown;
+}
+#trend li .circles span div .purple{
+    background-color: purple;
+}
+#trend li .circles span p{
+    padding: 5px;
+    border-radius: 50%;
+    background-color: red;
+}
+#trend li .txt .price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+#trend li .txt .price p{
+    color: gray;
+    text-decoration: line-through;
+}
+#trend li .img_con .icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    gap: 20px;
+    position: absolute;
+    margin-top: -6.7%;
+}
+#trend li .img_con .icons .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+#trend li .img_con .icons .top li{
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.6s;
+    line-height: 0;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: white;
+}
+#trend li .img_con .icons .top li:nth-child(1){
+    transition: 0.5s;
+}
+#trend li .img_con .icons .top li:nth-child(2){
+    transition: 0.7s;
+}
+#trend li .img_con .icons .top li:nth-child(3){
+    transition: 0.9s;
+}
+#trend li .img_con .icons .top li .material-symbols-outlined{
+    font-size: 20px;
+}
+#trend li .img_con .icons .top li:hover{
+    background-color: #41cde2;
+    color: white;
+}
+#trend li .img_con .icons .btm{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.592);
+    width: 100%;
+    height: 40px;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    /* transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out; */
+}
+.w-6{
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    width: 20px;
+    height: 20px;
+}
+#trend li .img_con .icons .btm .rgt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 50%;
+    color: white;
+    background: linear-gradient(to right, #41cde2  50%, transparent 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+    border: none;
+    outline: none;
+    border-left: 0.3px solid rgba(255, 255, 255, 0.839);
+    gap: 10px;
+}
+#trend li .img_con .icons .btm .rgt svg{
+    margin-top: -5px;
+}
+#trend li .img_con .icons .btm .rgt:hover{
+    background-position: left bottom;
+}
+#trend li .img_con .icons .btm .left{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+#trend li .img_con .icons .btm .left input{
+    width: 30px;
+    display: flex;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: white;
+}
+#trend li .img_con .icons .btm .left button{
+    /* padding: 5px; */
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    font-size: 10px;
+    color: white;
+    border: none;
+    transition: ease-in-out 0.4s;
+    outline: none;
+}
+#trend li .icons .btm .left button:hover{
+    background-color: white;
+    color: black;
+}
+/* COLLECTION SECTION */
+#collection{
+    width: 100%;
+    padding: 300px 0;
+    background-color:red;
+}
