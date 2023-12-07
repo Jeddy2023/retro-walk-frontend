@@ -8,11 +8,19 @@ import cate2 from '../images/cate2.webp';
 import { Link } from 'react-router-dom';
 import { EmblaCarousel } from './EmblaCarousel';
 import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Aos from 'aos';
 import Trend from './Trend';
 import 'aos/dist/aos.css';
 import Collection from '../Collection';
+import Tweet from '../testimony/Tweet';
+import Insta from '../../instagram/Insta';
+
+
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 function Home() {
      useEffect(() => {
         Aos.init();
@@ -72,12 +80,14 @@ function Home() {
                     </div>
                 </div>
                 <ul className="btm">
-                    <Trend/>       
+                    <Trend slides={SLIDES} options={OPTIONS} />       
                 </ul>
             </div>
         </section>
         
             <Collection/>
+            <Tweet slides={SLIDES} options={OPTIONS}/>
+            <Insta/>
     </>
   ) 
 }
