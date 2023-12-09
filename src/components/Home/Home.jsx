@@ -94,6 +94,7 @@ function Home() {
             <Collection/>
             <Tweet slides={SLIDES} options={OPTIONS}/>
             <Insta/>
+          
     </>
   ) 
 }
