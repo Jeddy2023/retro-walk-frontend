@@ -36,22 +36,28 @@ function Home() {
         </div>
         <div id="category">
             <div className="cate_1">
-                <div className="top">
+                <div className="top cate_img">
                     <img src={cate1_top} alt="" />
-                    <button className="txt ">Dress</button>
+                   <div className="btn">
+                   <button className="txt ">Dress</button>
+                   </div>
                 </div>
                 <div className="btm">
-                    <div className="rgt">
+                    <div className="rgt cate_img">
+                    <div className="btn">
                     <button className="txt ">Accessories</button>
+                    </div>
                         <img src={cate1_1} alt="" />
                     </div>
-                    <div className="left">
+                    <div className="left cate_img">
+                    <div className="btn">
                     <button className="txt ">Shoes</button>
+                    </div>
                         <img src={cate1_2} alt="" />
                     </div>
                 </div>
             </div>
-            <div className="cate_2">
+            <div className="cate_2 cate_img">
                 <div className="txt ">
                     <p>NEW ARRIVALS</p>
                     <h1>

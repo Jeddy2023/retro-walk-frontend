@@ -1,6 +1,7 @@
 import React from 'react'
 import '../styles/insta.css';
 import { data } from './img';
+import { Link } from 'react-router-dom';
 
 function Insta() {
   return (

@@ -1,0 +1,37 @@
+.btnx34{
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 45px;
+    padding: 10px 30px;
+    background: black;
+    position: relative;
+    z-index: 1;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 3px;
+    overflow: hidden;
+}
+.btnx34::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    cursor: pointer;
+    z-index: -1;
+    height: 100%;
+    background: #41cde2;
+    transition: all .3s ease;
+}
+.btnx34:hover::before{
+    width: 100%;
+    left: 0;
+}
+.hero_txt button{
+   
+    width: fit-content;
+    color: white;
+}

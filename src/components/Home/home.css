@@ -41,32 +41,11 @@
 }
 .hero_txt p{
     color: black;
-    width: fit-content;
+    width: fit-content; 
     font-weight: 600;
     font-size: 15px;
 }
-.btnx34{
-    border: 1px solid black;
-  border-radius: 3px;
-  display: block;
-  background: linear-gradient(to right, #41cde2  50%, black 50%);
-  background-size: 200% 100%;
-  background-position: right bottom;
-  transition: all .5s ease-out;
-  border: none;
-  outline: none;
-  padding: 18px 37px;
-}
 
-.btnx34:hover{
-    background-position: left bottom;
-}
-.hero_txt button{
-   
-    background-color: black;
-    width: fit-content;
-    color: white;
-}
 #hero_1:nth-child(2) .hero_txt{
     margin-left: -47%;
 }
@@ -111,6 +90,7 @@
 #category .cate_1{
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 38%;
     height: 100%;
 }
@@ -126,11 +106,37 @@
 #category .cate_1 .top,
 #category .cate_1 .btm{
     width: 100%;
+    position: relative;
     height: 50%;
 }
 #category .cate_1 .btm div{
     height: 100%;
     width: 50%;
+}
+ .cate_img{
+    position: relative;
+    overflow: hidden;
+}
+ .cate_img::before{
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: -75%;
+    display: block;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right,rgba(255,255,255,0) 0%,rgba(255,255,255,.3) 100%);
+    transform: skew(-25deg);
+}
+ .cate_img:hover::before{
+    animation: shine .95s;
+}
+@keyframes shine {
+    100% {
+        left: 125%;
+    }
+   
 }
 #category .cate_1 img,
 #category .cate_2 img{
@@ -141,22 +147,48 @@
 #category .cate_2{
     width: 63%;
     display: flex;
+    position: relative;
     align-items: flex-end;
 }
-#category .cate_1 .txt{
+#category .btn {
     position: absolute;
-    padding: 13px 40px;
-    border-radius: 4px;
-    align-items: center;
-    justify-content: center;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+#category .btn .txt{
+    display: inline-block;
     font-size: 18px;
-    display: block;
-    background: linear-gradient(to right, #41cde2  50%, white 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all .5s ease-out;
-    border: none; 
+    font-weight: 300;
+    line-height: 45px;
+    padding: 0 40px;
+    background: white;
+    position: relative;
+    z-index: 1;
+    border: none;
     outline: none;
+    cursor: pointer;
+    transition: all .3s ease;
+    border-radius: 3px;
+    overflow: hidden;
+}
+#category .btn .txt::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    cursor: pointer;
+    z-index: -1;
+    height: 100%;
+    background: #41cde2;
+    transition: all .3s ease;
+}
+#category .btn .txt:hover::before{
+    width: 100%;
+    left: 0;
 }
 
 #category .cate_1 .txt:hover{
