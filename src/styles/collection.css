@@ -2,6 +2,8 @@
     width: 100%;
     display: flex;
     padding: 4% 2%;
+    z-index: 1;
+    position: relative;
     box-sizing: border-box;
     height: 100vh;
 }

@@ -8,11 +8,19 @@ import cate2 from '../images/cate2.webp';
 import { Link } from 'react-router-dom';
 import { EmblaCarousel } from './EmblaCarousel';
 import { useEffect } from 'react';
-import { useState } from 'react';
+// import { useState } from 'react';
 import Aos from 'aos';
 import Trend from './Trend';
 import 'aos/dist/aos.css';
 import Collection from '../Collection';
+import Tweet from '../testimony/Tweet';
+import Insta from '../../instagram/Insta';
+
+
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
+
 function Home() {
      useEffect(() => {
         Aos.init();
@@ -28,22 +36,28 @@ function Home() {
         </div>
         <div id="category">
             <div className="cate_1">
-                <div className="top">
+                <div className="top cate_img">
                     <img src={cate1_top} alt="" />
-                    <button className="txt ">Dress</button>
+                   <div className="btn">
+                   <button className="txt ">Dress</button>
+                   </div>
                 </div>
                 <div className="btm">
-                    <div className="rgt">
+                    <div className="rgt cate_img">
+                    <div className="btn">
                     <button className="txt ">Accessories</button>
+                    </div>
                         <img src={cate1_1} alt="" />
                     </div>
-                    <div className="left">
+                    <div className="left cate_img">
+                    <div className="btn">
                     <button className="txt ">Shoes</button>
+                    </div>
                         <img src={cate1_2} alt="" />
                     </div>
                 </div>
             </div>
-            <div className="cate_2">
+            <div className="cate_2 cate_img">
                 <div className="txt ">
                     <p>NEW ARRIVALS</p>
                     <h1>
@@ -72,12 +86,15 @@ function Home() {
                     </div>
                 </div>
                 <ul className="btm">
-                    <Trend/>       
+                    <Trend slides={SLIDES} options={OPTIONS} />       
                 </ul>
             </div>
         </section>
         
             <Collection/>
+            <Tweet slides={SLIDES} options={OPTIONS}/>
+            <Insta/>
+          
     </>
   ) 
 }

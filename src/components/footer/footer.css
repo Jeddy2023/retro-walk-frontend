@@ -1,0 +1,125 @@
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+footer .f_con{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.f_con .f_list{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0;
+    justify-content: center;
+    border-top: 2px solid gainsboro;
+    border-bottom: 2px solid gainsboro;
+}
+.f_con .f_list .list{
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding:12px 0 12px 50px;
+    border-right: 1px solid gainsboro;
+}
+.f_list ul li{
+    font-size: 14px;
+}
+.f_list ul a{
+    color: gray;
+    font-size: 14px;
+    transition: 0.2s ease-in-out;
+}
+.f_list ul a:hover{
+    color: #41cde2;
+}
+.f_list .list:nth-child(1){
+    padding: 0;
+}
+
+.f_list .email{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 12px 0 12px 50px;
+}
+.f_list .email h4{
+    font-size: 14px;
+    font-weight: 500;
+}
+.f_list .email p{
+    font-size: 14px;
+    color: gray;
+}
+.f_list .email form{
+    display: flex;
+    width: 100%;
+    gap: 2%;
+    align-items: center;
+}
+.f_list .email form input{
+    width: 79%;
+    background-color: transparent;
+    border: none;
+    padding: 5px 10px;
+    border-bottom: 2px solid black;
+    outline: none;
+    font-size: 16px;
+}
+.f_list .email form button{
+    width: 13%;
+    height: 100%;
+    font-size: 23px;
+    cursor: pointer;
+    font-weight: 200;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    background-color: transparent;
+}
+.f_list .email form button:hover{
+    color: #41cde2;
+    border-color: #41cde2;
+}
+.f_list .email .icons{
+    display: flex;
+    gap: 23px;
+    color: black;
+    align-items: center;
+}
+.f_list .email .icons a{
+    color: black;
+    transition: 0.3s ease-in-out;
+}
+.f_list .email .icons a:hover{
+    color: #41cde2;
+}
+
+.f_con .pay{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 3.7%;
+    color: gray;
+}
+
+.f_con .pay ul{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.f_con .pay ul li img{
+    width: 50px;
+}
+.f_con .pay ul li:nth-child(5) img{
+    width: 20px;
+}

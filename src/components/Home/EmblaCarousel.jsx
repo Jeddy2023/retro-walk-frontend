@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import { hero } from './hero'
 // import AOS from 'aos'
+import './hero.css'
 import  './home.css'
 // import 'aos/dist/aos.css';
 import Autoplay from 'embla-carousel-autoplay'

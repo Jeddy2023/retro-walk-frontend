@@ -1,0 +1,166 @@
+.container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 70px;
+    align-items: center;
+}
+.container .head{
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    text-align: center;
+}
+.container .head h1{
+    font-weight: 300;
+}
+.container .head h6{
+    color: gray;
+    font-size: 15px;
+    font-weight: 300;
+}
+.container .head h5{
+    font-weight: 500;
+    font-size: 17px;
+}
+.container .head .txt{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+}
+.container .imgs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3%;
+}
+.container .imgs ul{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 270px));
+    gap: 7px;
+}
+.container .imgs .li,
+.imgs li a, 
+.imgs li a img{
+    width: 100%;
+}
+.container .imgs li{
+    position: relative;
+}
+.container .imgs li a{
+    display: flex;
+    position: relative;
+}
+.container .imgs li a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(.8);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
+    background: rgba(0,0,0,.25);
+    z-index: 1;
+}
+.container .imgs li a:hover::before{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);        
+}
+.container .imgs li .plus{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    z-index: 5;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    cursor: pointer;
+    font-size: 25px;
+    left: 50%;
+    background-color: white;
+    border-radius: 50%;
+}
+.container .imgs li:nth-child(1) .plus{
+    left: 20%;
+}
+.container .imgs li:nth-child(2) .plus{
+    left: 54%;
+    top: 39%;
+}
+.container .imgs li:nth-child(3) .plus{
+    top: 42%;
+    left: 54%;
+}
+
+.container .imgs li .plus::before{
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    border: 1px solid white;
+    -webkit-animation-name: scale-lookbook;
+    animation-name: scale-lookbook;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+.container .imgs li .plus::after{
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    content: "";
+    border: 1px solid white;
+    -webkit-animation-name: scale-lookbook;
+    animation-name: scale-lookbook;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+}
+@keyframes scale-lookbook {
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        -webkit-transform: scale(2);
+        opacity: 0;
+    }
+}
+.container .imgs li .plus:hover{
+    background-color: rgb(64, 220, 220);
+    color: white;
+}
+.container .imgs li .plus:hover::before{
+    border-color: rgb(64, 220, 220);
+}
+.container .imgs li .plus:hover::after{
+    border-color: rgb(64, 220, 220);
+}
